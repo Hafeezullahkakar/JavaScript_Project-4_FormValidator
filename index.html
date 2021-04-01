@@ -10,21 +10,45 @@
 <body>
     <div class="form-container">
         <h1>Sign Up Today!</h1>
-        <form action="">
-            <label for="Name">Name</label><br>
-            <input type="text" placeholder="Full Name"><br>
-            <label for="Phone Number">Phone Number</label><br>
-            <input type="phone-number" placeholder="Phone Number"><br>
-            <label for="Email">Email</label><br>
-            <input type="email" placeholder="Email"><br>
-            <label for="Website">Website Url</label><br>
-            <input type="url" placeholder="Website url"><br>
-            <label for="Password">Password</label><br>
-            <input type="password" placeholder="Password"><br>
-            <label for="Confirm Password">Confirm Password</label><br>
-            <input type="password" placeholder="Confirm Password"><br>
-            <!-- <button type="submit">Register</button> -->
+        <!-- Form -->
+        <form action="" id="form" >
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" placeholder="Full Name" required pattern="[a-zA-Z]+" name="name">                
+            </div>    
+            <!-- Phone Number -->
+            <div class="form-group">                
+                <label for="Phone">Phone Number</label>
+                <input type="tell"  id = "Phone" placeholder="03XX-XXXXXXX" required pattern="[0-9]{4}-[0-9]{7}" name="phone">
+            </div>
+            <!-- Email -->
+            <div class="form-group">                
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com" required name="email">
+            </div>
+            <!-- Website URL -->
+            <div class="form-group">                
+                <label for="website">Website Url</label>
+                <input type="url" id="website" placeholder="www.xyz.com" required name="website">
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Include min 8 characters( Icluding Uppercase, Lowercase, Numbe and special character" name="password">                
+            </div>
+            <!-- Confirm Password -->
+            <div class="form-group" >
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm Password" required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Include min 8 characters( Icluding Uppercase, Lowercase, Numbe and special character" name="confirmpassword">
+            </div>
+                    <!-- <button type="submit">Register</button> -->
+                    <button type="submit" >Register</button>
         </form>       
+        <!-- Message container -->
+        <div class="message-container">
+            <h3 id="message">Dont'1 Hasitate!</h3>
+        </div>
 
     </div>
     <script src="script.js"> </script>
