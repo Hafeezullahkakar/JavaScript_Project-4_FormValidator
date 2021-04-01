@@ -70,7 +70,7 @@ button{
     color:white;
     background-color: black;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; 
     font-weight: bold;
     font-size: 1.3rem;
     box-shadow: 0 5px 3px rgb(173, 144, 144);
